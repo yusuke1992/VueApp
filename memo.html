@@ -1,0 +1,32 @@
+    <!-- vue.js 条件を使ったクラスの操作 -->
+    <ul>
+        <li v-for="item in list"
+         v-bind:key="item.id"
+         v-bind:class="{tuyoi: item.hp > 100}">
+         <!-- v-bind:class="{クラス名: クラスを付与する条件}"で -->
+         <!-- js側に条件に合う要素があるときクラスを付与する -->
+            ID.{{item.id}}{{item.name}}HP.{{item.hp}}
+            <span v-if="item.hp >300">つよい!</span>
+            <!-- この場合、もしitem.hp > 300というデータがあれば<span>つよい</span>を表示する　 -->
+        </li>
+    </ul>
+
+    jsonファイルの書き方について
+    [name: '名前' ]→ エラーになる
+    ["name": "名前" ]→ OK
+
+section 2
+    <div id="app">
+            <!-- 名前　<input v-model="name">
+            <button v-on:click="doAdd">モンスターを追加</button> -->
+            <ul>
+                <li v-for="(item, index) in list" v-bind:key="item.id">
+                    ID.{{item.id}}{{item.name}}HP.{{item.hp}}
+                    <!-- <span v-if= "item.hp<50">瀕死!</span>
+                    <button v-on:click="doRemove(index)">モンスターを削除</button>
+                    <button v-on:click="doAttack(index)">モンスターを攻撃</button> -->
+                </li>
+            </ul>
+        </div>
+
+
