@@ -1,0 +1,11 @@
+.v-enter-active, .v-leave-active {
+    transition: oppacity 1s;
+}
+
+.v-enter, .v-leave-to {
+    oppacity: 0;
+}
+
+button{
+    background-color: red;
+}

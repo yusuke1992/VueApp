@@ -7,13 +7,18 @@
 </head>
 <body>
     <div id="app">
-        <!-- <p>{{message}}</p> -->
-        <ol>
-            <li v-for="item in list">{{item}}</li>
-        </ol>
-        <button v-on:click="handleClick">click</button>
+        <select v-model="current">
+            <option v-for="topic in topics" v-bind:value="topic.value">
+                {{topic.name}}
+            </option>
+        </select>
+        <div v-for="item in list">{{item.full_name}}</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.1/smooth-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.core.js"></script>
+
 </body>
 </html>
